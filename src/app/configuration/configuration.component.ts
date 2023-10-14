@@ -12,6 +12,7 @@ export class ConfigurationComponent {
 
   constructor(private configService: ConfigService, private router: Router) {
     this.token = this.configService.getToken();
+    localStorage.removeItem('token');
   }
 
   public setToken(): void {
