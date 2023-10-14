@@ -18,6 +18,6 @@ export class ConfigurationComponent {
   public setToken(): void {
     this.configService.setToken(this.token);
     localStorage.setItem('token', this.token);
-    // this.router.navigate(['/'])
+    this.router.navigate(['entityExtraction'])
   }
 }
