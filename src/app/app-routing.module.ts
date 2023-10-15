@@ -6,6 +6,7 @@ import { TextSimilarityComponent } from './text-similarity/text-similarity.compo
 import { LanguageDetectionComponent } from './language-detection/language-detection.component';
 import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analysis.component';
 import { authGuard } from './auth.guard';
+import { ApiHistoryComponent } from './api-history/api-history.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,11 @@ const routes: Routes = [
   {
     path: 'sentimentAnalysis',
     component: SentimentAnalysisComponent,
+    canActivate: [authGuard]
+  },
+  {
+    path: 'history',
+    component: ApiHistoryComponent,
     canActivate: [authGuard]
   }
 ];
