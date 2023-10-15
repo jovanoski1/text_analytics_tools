@@ -43,3 +43,15 @@ export interface EntityExtractionResult {
     lang: string;
     annotations: Entity[];
 }
+
+export interface Sentiment {
+    score: number;
+    type: string;
+}
+
+export interface SentimentAnalysisResult {
+    timestamp: number;
+    time: number;
+    lang: string;
+    sentiment: Sentiment;
+}
